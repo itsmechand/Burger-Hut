@@ -2,9 +2,6 @@
 
 A modern, responsive website for a burger restaurant featuring an interactive menu, online ordering system, and seamless user experience.
 
-![Burger Hut Hero Section](imgs/hero-background.jpg)
-
-
 ## Technologies Used
 
 - HTML5
@@ -21,9 +18,6 @@ The website is fully responsive and optimized for:
 - Tablet (768px to 1199px)
 - Mobile (below 768px)
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👏 Acknowledgments
 
