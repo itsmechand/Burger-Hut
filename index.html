@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger Hut</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="imgs/iconlogo.png" alt="Burger Hut Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to Burger Hut</h1>
+      <p>Experience the Taste of Perfection</p>
+      <a href="#menu" class="btn">Explore Our Menu</a>
+    </div>
+  </section>
+
+  <section class="about dark-theme" id="about">
+    <div class="about-content">
+      <h2>About Burger Hut</h2>
+      <p>Experience the finest gourmet burgers in a cozy and rustic atmosphere. At Burger Hut, we deliver exceptional
+        flavors that will tantalize your taste buds.</p>
+
+    </div>
+    <div class="about-image">
+      <img src="imgs/about-image.jpg" alt="About Image">
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="imgs/burger1.jpg" alt="Classic Cheeseburger">
+        <div class="menu-item-content">
+          <h3>Classic Cheeseburger</h3>
+          <p>A juicy beef patty topped with melted cheese, fresh lettuce, tomato, and our special sauce. Served with
+            crispy fries.</p>
+          <div class="menu-item-footer">
+            <span class="price">₹149</span>
+            <button class="add-to-cart-btn" onclick="addToCart('classic_cheeseburger', 'Classic Cheeseburger', 149)">
+              <i class="fas fa-shopping-cart"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="imgs/burger2.jpg" alt="Veggie Delight">
+        <div class="menu-item-content">
+          <h3>Veggie Delight</h3>
+          <p>A delicious veggie patty made from fresh vegetables and spices. Topped with avocado, sprouts, and mayo.
+            Served with sweet potato fries.</p>
+          <div class="menu-item-footer">
+            <span class="price">₹99</span>
+            <button class="add-to-cart-btn" onclick="addToCart('veggie_delight', 'Veggie Delight', 99)">
+              <i class="fas fa-shopping-cart"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="imgs/burger3.jpg" alt="Spicy BBQ Burger">
+        <div class="menu-item-content">
+          <h3>Spicy BBQ Burger</h3>
+          <p>A fiery burger with grilled chicken breast, spicy BBQ sauce, jalapenos, crispy onion rings, and chipotle
+            mayo. Served with coleslaw.</p>
+          <div class="menu-item-footer">
+            <span class="price">₹239</span>
+            <button class="add-to-cart-btn" onclick="addToCart('spicy_bbq_burger', 'Spicy BBQ Burger', 239)">
+              <i class="fas fa-shopping-cart"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="imgs/Aussie_Burger.png" alt="Aussie Burger">
+        <div class="menu-item-content">
+          <h3>Aussie Burger</h3>
+          <p>A hearty burger stacked with a juicy beef patty, grilled pineapple, beetroot slices, crispy bacon, fried
+            egg,
+            cheddar cheese, and fresh veggies.</p>
+          <div class="menu-item-footer">
+            <span class="price">₹129</span>
+            <button class="add-to-cart-btn" onclick="addToCart('aussie_burger', 'Aussie Burger', 129)">
+              <i class="fas fa-shopping-cart"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="imgs/Beyond_Burger.png" alt="Beyond Burger">
+        <div class="menu-item-content">
+          <h3>Beyond Burger</h3>
+          <p>A plant-based burger featuring a juicy Beyond Meat patty, vegan cheddar, crisp lettuce, tomato, pickles,
+            and
+            caramelized onions.</p>
+          <div class="menu-item-footer">
+            <span class="price">₹189</span>
+            <button class="add-to-cart-btn" onclick="addToCart('beyond_burger', 'Beyond Burger', 189)">
+              <i class="fas fa-shopping-cart"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="imgs/Big_Mac_Burger.png" alt="Big Mac Burger">
+        <div class="menu-item-content">
+          <h3>Big Mac Burger</h3>
+          <p>A double-layered burger with two juicy beef patties, tangy Big Mac sauce, crisp shredded lettuce, cheddar
+            cheese.</p>
+          <div class="menu-item-footer">
+            <span class="price">₹299</span>
+            <button class="add-to-cart-btn" onclick="addToCart('big_mac_burger', 'Big Mac Burger', 299)">
+              <i class="fas fa-shopping-cart"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="imgs/Burger_King_Whopper.png" alt="Burger King Whopper">
+        <div class="menu-item-content">
+          <h3>Burger King Whopper</h3>
+          <p>A flame-grilled beef patty topped with fresh lettuce, juicy tomato, crunchy pickles, sliced onions,
+            ketchup,
+            and creamy mayo.</p>
+          <div class="menu-item-footer">
+            <span class="price">₹349</span>
+            <button class="add-to-cart-btn" onclick="addToCart('whopper', 'Burger King Whopper', 349)">
+              <i class="fas fa-shopping-cart"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="imgs/Chicken Burger.jpeg" alt="Chicken Burger">
+        <div class="menu-item-content">
+          <h3>Chicken Burger</h3>
+          <p>A crispy golden chicken fillet layered with fresh lettuce, tomato slices, and creamy mayo, all tucked into
+            a
+            soft toasted bun.</p>
+          <div class="menu-item-footer">
+            <span class="price">₹249</span>
+            <button class="add-to-cart-btn" onclick="addToCart('chicken_burger', 'Chicken Burger', 249)">
+              <i class="fas fa-shopping-cart"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="imgs/Chili_Burger.png" alt="Chili Burger">
+        <div class="menu-item-content">
+          <h3>Chili Burger</h3>
+          <p>A bold burger loaded with a juicy beef patty, house-made chili, melted cheddar cheese, jalapeños, and
+            crispy
+            onions.</p>
+          <div class="menu-item-footer">
+            <span class="price">₹149</span>
+            <button class="add-to-cart-btn" onclick="addToCart('chili_burger', 'Chili Burger', 149)">
+              <i class="fas fa-shopping-cart"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="imgs/Donut_Burger.png" alt="Donut Burger">
+        <div class="menu-item-content">
+          <h3>Donut Burger</h3>
+          <p>A sweet and savory creation with a juicy beef patty, crispy bacon, melted cheddar cheese, and a fried egg.
+          </p>
+          <div class="menu-item-footer">
+            <span class="price">₹239</span>
+            <button class="add-to-cart-btn" onclick="addToCart('donut_burger', 'Donut Burger', 239)">
+              <i class="fas fa-shopping-cart"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="imgs/Green_Chile_Burger.png" alt="Green Chile Burger">
+        <div class="menu-item-content">
+          <h3>Green Chile Burger</h3>
+          <p>A juicy beef patty topped with roasted green chiles, pepper jack cheese, crispy lettuce, and zesty chipotle
+            mayo.</p>
+          <div class="menu-item-footer">
+            <span class="price">₹139</span>
+            <button class="add-to-cart-btn" onclick="addToCart('green_chile_burger', 'Green Chile Burger', 139)">
+              <i class="fas fa-shopping-cart"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="imgs/Hamburger.png" alt="Hamburger">
+        <div class="menu-item-content">
+          <h3>Hamburger</h3>
+          <p>A timeless favorite with a juicy beef patty, crisp lettuce, fresh tomato, onions, pickles, and ketchup—all
+            nestled in a soft toasted bun.</p>
+          <div class="menu-item-footer">
+            <span class="price">₹239</span>
+            <button class="add-to-cart-btn" onclick="addToCart('hamburger', 'Hamburger', 239)">
+              <i class="fas fa-shopping-cart"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="order" id="order">
+    <h2>Place Your Order</h2>
+    <div class="order-container">
+      <div class="order-grid">
+        <div class="order-card menu-card">
+          <div class="card-header">
+            <h3>Menu Selection</h3>
+            <p>Choose your favorite items</p>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item-card">
+              <div class="item-image">
+                <img src="imgs/burger1.jpg" alt="Classic Cheeseburger">
+              </div>
+              <div class="item-details">
+                <h4>Classic Cheeseburger</h4>
+                <p>A juicy beef patty with melted cheese and fresh veggies</p>
+                <div class="item-price">₹149</div>
+                <div class="item-quantity">
+                  <button class="quantity-btn minus">-</button>
+                  <input type="number" value="0" min="0" max="10">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item-card">
+              <div class="item-image">
+                <img src="imgs/burger2.jpg" alt="Veggie Delight">
+              </div>
+              <div class="item-details">
+                <h4>Veggie Delight</h4>
+                <p>Fresh vegetable patty with avocado and sprouts</p>
+                <div class="item-price">₹99</div>
+                <div class="item-quantity">
+                  <button class="quantity-btn minus">-</button>
+                  <input type="number" value="0" min="0" max="10">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item-card">
+              <div class="item-image">
+                <img src="imgs/burger3.jpg" alt="Spicy BBQ Burger">
+              </div>
+              <div class="item-details">
+                <h4>Spicy BBQ Burger</h4>
+                <p>Grilled chicken with spicy BBQ sauce and jalapenos</p>
+                <div class="item-price">₹239</div>
+                <div class="item-quantity">
+                  <button class="quantity-btn minus">-</button>
+                  <input type="number" value="0" min="0" max="10">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item-card">
+              <div class="item-image">
+                <img src="imgs/Aussie_Burger.png" alt="Aussie Burger">
+              </div>
+              <div class="item-details">
+                <h4>Aussie Burger</h4>
+                <p>Beef patty with pineapple, beetroot, bacon, and egg</p>
+                <div class="item-price">₹129</div>
+                <div class="item-quantity">
+                  <button class="quantity-btn minus">-</button>
+                  <input type="number" value="0" min="0" max="10">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item-card">
+              <div class="item-image">
+                <img src="imgs/Beyond_Burger.png" alt="Beyond Burger">
+              </div>
+              <div class="item-details">
+                <h4>Beyond Burger</h4>
+                <p>Plant-based patty with vegan cheddar and veggies</p>
+                <div class="item-price">₹189</div>
+                <div class="item-quantity">
+                  <button class="quantity-btn minus">-</button>
+                  <input type="number" value="0" min="0" max="10">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item-card">
+              <div class="item-image">
+                <img src="imgs/Big_Mac_Burger.png" alt="Big Mac Burger">
+              </div>
+              <div class="item-details">
+                <h4>Big Mac Burger</h4>
+                <p>Double beef patties with special Big Mac sauce</p>
+                <div class="item-price">₹299</div>
+                <div class="item-quantity">
+                  <button class="quantity-btn minus">-</button>
+                  <input type="number" value="0" min="0" max="10">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item-card">
+              <div class="item-image">
+                <img src="imgs/Burger_King_Whopper.png" alt="Burger King Whopper">
+              </div>
+              <div class="item-details">
+                <h4>Burger King Whopper</h4>
+                <p>Flame-grilled beef with fresh toppings</p>
+                <div class="item-price">₹349</div>
+                <div class="item-quantity">
+                  <button class="quantity-btn minus">-</button>
+                  <input type="number" value="0" min="0" max="10">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item-card">
+              <div class="item-image">
+                <img src="imgs/Chicken Burger.jpeg" alt="Chicken Burger">
+              </div>
+              <div class="item-details">
+                <h4>Chicken Burger</h4>
+                <p>Crispy chicken fillet with fresh veggies</p>
+                <div class="item-price">₹249</div>
+                <div class="item-quantity">
+                  <button class="quantity-btn minus">-</button>
+                  <input type="number" value="0" min="0" max="10">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item-card">
+              <div class="item-image">
+                <img src="imgs/Chili_Burger.png" alt="Chili Burger">
+              </div>
+              <div class="item-details">
+                <h4>Chili Burger</h4>
+                <p>Beef patty with house-made chili and jalapeños</p>
+                <div class="item-price">₹149</div>
+                <div class="item-quantity">
+                  <button class="quantity-btn minus">-</button>
+                  <input type="number" value="0" min="0" max="10">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item-card">
+              <div class="item-image">
+                <img src="imgs/Donut_Burger.png" alt="Donut Burger">
+              </div>
+              <div class="item-details">
+                <h4>Donut Burger</h4>
+                <p>Sweet and savory with beef, bacon, and egg</p>
+                <div class="item-price">₹239</div>
+                <div class="item-quantity">
+                  <button class="quantity-btn minus">-</button>
+                  <input type="number" value="0" min="0" max="10">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item-card">
+              <div class="item-image">
+                <img src="imgs/Green_Chile_Burger.png" alt="Green Chile Burger">
+              </div>
+              <div class="item-details">
+                <h4>Green Chile Burger</h4>
+                <p>Beef patty with roasted green chiles</p>
+                <div class="item-price">₹139</div>
+                <div class="item-quantity">
+                  <button class="quantity-btn minus">-</button>
+                  <input type="number" value="0" min="0" max="10">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item-card">
+              <div class="item-image">
+                <img src="imgs/Hamburger.png" alt="Hamburger">
+              </div>
+              <div class="item-details">
+                <h4>Hamburger</h4>
+                <p>Classic beef patty with fresh toppings</p>
+                <div class="item-price">₹239</div>
+                <div class="item-quantity">
+                  <button class="quantity-btn minus">-</button>
+                  <input type="number" value="0" min="0" max="10">
+                  <button class="quantity-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-card delivery-card">
+          <div class="card-header">
+            <h3>Delivery Details</h3>
+            <p>Where should we deliver your order?</p>
+          </div>
+          <form class="delivery-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="address">Delivery Address</label>
+              <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="notes">Special Instructions</label>
+              <textarea id="notes" name="notes" rows="2"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <div class="order-card summary-card">
+          <div class="card-header">
+            <h3>Your Cart</h3>
+            <p>Review your order before checkout</p>
+          </div>
+          <div class="order-summary">
+            <div class="summary-items" id="cartItems">
+              <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="summary-totals">
+              <div class="total-item">
+                <span>Subtotal</span>
+                <span class="subtotal-price">₹0.00</span>
+              </div>
+              <div class="total-item">
+                <span>Delivery Fee</span>
+                <span class="delivery-fee">₹16.00</span>
+              </div>
+              <div class="total-item grand-total">
+                <span>Total</span>
+                <span class="total-price">₹0.00</span>
+              </div>
+            </div>
+            <button type="submit" class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonials-container">
+      <div class="testimonial-slider">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-image">
+              <img src="imgs/customer1.jpg" alt="Customer 1">
+            </div>
+            <div class="testimonial-info">
+              <h3 class="testimonial-name">Prabhas</h3>
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-text">"The burgers at Burger Hut are simply amazing! The flavors are rich, and the
+            ingredients are always fresh. It's my go-to place whenever I'm craving a delicious meal."</p>
+          <span class="testimonial-date">05/04/2024</span>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-image">
+              <img src="imgs/customer2.jpg" alt="Customer 2">
+            </div>
+            <div class="testimonial-info">
+              <h3 class="testimonial-name">Keerthi</h3>
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-text">"Burger Hut never disappoints! The quality of their burgers and the friendly
+            service make it a top-notch dining experience. I highly recommend it to all burger lovers!"</p>
+          <span class="testimonial-date">27/09/2023</span>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <h2>Gallery</h2>
+    <div class="image-grid">
+      <div class="image-item"><img src="imgs/gallery1.jpg" alt="Image 1"></div>
+      <div class="image-item"><img src="imgs/gallery2.jpg" alt="Image 2"></div>
+      <div class="image-item"><img src="imgs/gallery3.jpg" alt="Image 3"></div>
+      <div class="image-item"><img src="imgs/gallery4.jpg" alt="Image 4"></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      <div class="contact-header">
+        <h2>Get in Touch</h2>
+        <p>We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="info-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Our Location</h3>
+            <p>Chirala, Andhra Pradesh, India</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Call Us</h3>
+            <p>+91 1234567890</p>
+            <p>Mon-Sun: 10:00 AM - 10:00 PM</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email Us</h3>
+            <p>info@burgerhut.com</p>
+            <p>support@burgerhut.com</p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img src="imgs/iconlogo.png" alt="Burger Hut Logo">
+          <p>Experience the taste of perfection with our gourmet burgers made from the finest ingredients.</p>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Our Menu</a></li>
+          <li><a href="#order">Order Now</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Opening Hours</h3>
+        <ul class="opening-hours">
+          <li>Monday - Friday: <span>10:00 AM - 10:00 PM</span></li>
+          <li>Saturday: <span>11:00 AM - 11:00 PM</span></li>
+          <li>Sunday: <span>11:00 AM - 10:00 PM</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> Chirala, Andhra Pradesh, India</li>
+          <li><i class="fas fa-phone"></i> +91 1234567890</li>
+          <li><i class="fas fa-envelope"></i> info@burgerhut.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p>&copy; 2024 Burger Hut. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Sitemap</a>
+        </div>
+        <p class="credits">Designed by <a href="#">Chandra Sekhar</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navbar links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Cart functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const cart = {
+        items: [],
+
+        addItem(item) {
+          const existingItem = this.items.find(i => i.id === item.id);
+          if (existingItem) {
+            existingItem.quantity = item.quantity;
+          } else {
+            this.items.push(item);
+          }
+          this.updateCart();
+        },
+
+        removeItem(itemId) {
+          this.items = this.items.filter(item => item.id !== itemId);
+          this.updateCart();
+        },
+
+        updateQuantity(itemId, quantity) {
+          const item = this.items.find(i => i.id === itemId);
+          if (item) {
+            item.quantity = quantity;
+            if (quantity <= 0) {
+              this.removeItem(itemId);
+            }
+          }
+          this.updateCart();
+        },
+
+        calculateTotal() {
+          const subtotal = this.items.reduce((total, item) =>
+            total + (item.price * item.quantity), 0);
+          const deliveryFee = this.items.length > 0 ? 40 : 0;
+          return {
+            subtotal,
+            deliveryFee,
+            total: subtotal + deliveryFee
+          };
+        },
+
+        updateCart() {
+          const cartContainer = document.getElementById('cartItems');
+          const subtotalElement = document.querySelector('.subtotal-price');
+          const deliveryFeeElement = document.querySelector('.delivery-fee');
+          const totalElement = document.querySelector('.total-price');
+
+          // Update cart items display
+          cartContainer.innerHTML = this.items.map(item => `
+            <div class="cart-item" data-id="${item.id}">
+              <div class="cart-item-details">
+                <h4>${item.name}</h4>
+                <div class="cart-item-price">₹${(item.price * item.quantity).toFixed(2)}</div>
+              </div>
+              <div class="cart-item-quantity">
+                <button class="quantity-btn minus" onclick="cart.updateQuantity('${item.id}', ${item.quantity - 1})">-</button>
+                <span>${item.quantity}</span>
+                <button class="quantity-btn plus" onclick="cart.updateQuantity('${item.id}', ${item.quantity + 1})">+</button>
+                <button class="remove-btn" onclick="cart.removeItem('${item.id}')">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          `).join('');
+
+          // Update totals
+          const totals = this.calculateTotal();
+          subtotalElement.textContent = `₹${totals.subtotal.toFixed(2)}`;
+          deliveryFeeElement.textContent = `₹${totals.deliveryFee.toFixed(2)}`;
+          totalElement.textContent = `₹${totals.total.toFixed(2)}`;
+
+          // Save cart to localStorage
+          localStorage.setItem('cart', JSON.stringify(this.items));
+        }
+      };
+
+      // Initialize quantity buttons
+      document.querySelectorAll('.menu-item-card').forEach(card => {
+        const itemId = card.querySelector('h4').textContent.replace(/\s+/g, '_').toLowerCase();
+        const quantityInput = card.querySelector('input[type="number"]');
+        const minusBtn = card.querySelector('.minus');
+        const plusBtn = card.querySelector('.plus');
+        const itemName = card.querySelector('h4').textContent;
+        const itemPrice = parseFloat(card.querySelector('.item-price').textContent.replace('₹', ''));
+
+        minusBtn.addEventListener('click', () => {
+          let quantity = parseInt(quantityInput.value) - 1;
+          if (quantity >= 0) {
+            quantityInput.value = quantity;
+            if (quantity > 0) {
+              cart.addItem({
+                id: itemId,
+                name: itemName,
+                price: itemPrice,
+                quantity: quantity
+              });
+            } else {
+              cart.removeItem(itemId);
+            }
+          }
+        });
+
+        plusBtn.addEventListener('click', () => {
+          let quantity = parseInt(quantityInput.value) + 1;
+          if (quantity <= 10) {
+            quantityInput.value = quantity;
+            cart.addItem({
+              id: itemId,
+              name: itemName,
+              price: itemPrice,
+              quantity: quantity
+            });
+          }
+        });
+
+        quantityInput.addEventListener('change', () => {
+          let quantity = parseInt(quantityInput.value);
+          if (quantity > 0 && quantity <= 10) {
+            cart.addItem({
+              id: itemId,
+              name: itemName,
+              price: itemPrice,
+              quantity: quantity
+            });
+          } else if (quantity <= 0) {
+            quantityInput.value = 0;
+            cart.removeItem(itemId);
+          } else {
+            quantityInput.value = 10;
+            cart.addItem({
+              id: itemId,
+              name: itemName,
+              price: itemPrice,
+              quantity: 10
+            });
+          }
+        });
+      });
+
+      // Load cart from localStorage
+      const savedCart = localStorage.getItem('cart');
+      if (savedCart) {
+        const items = JSON.parse(savedCart);
+        items.forEach(item => {
+          cart.addItem(item);
+          const card = document.querySelector(`[data-id="${item.id}"]`);
+          if (card) {
+            card.querySelector('input[type="number"]').value = item.quantity;
+          }
+        });
+      }
+
+      // Handle checkout
+      document.getElementById('checkoutBtn').addEventListener('click', function () {
+        if (cart.items.length === 0) {
+          alert('Please add items to your cart before checking out.');
+          return;
+        }
+
+        const form = document.querySelector('.delivery-form');
+        const name = form.querySelector('#name').value;
+        const phone = form.querySelector('#phone').value;
+        const address = form.querySelector('#address').value;
+
+        if (!name || !phone || !address) {
+          alert('Please fill in all required delivery details.');
+          return;
+        }
+
+        // Here you would typically send the order to a server
+        const order = {
+          items: cart.items,
+          totals: cart.calculateTotal(),
+          deliveryDetails: {
+            name,
+            phone,
+            address,
+            specialInstructions: form.querySelector('#notes').value
+          }
+        };
+
+        console.log('Order placed:', order);
+        alert('Thank you for your order! We will deliver it soon.');
+
+        // Clear cart and form
+        cart.items = [];
+        cart.updateCart();
+        form.reset();
+        localStorage.removeItem('cart');
+      });
+    });
+
+    function addToCart(itemId, itemName, price) {
+      const cart = {
+        items: JSON.parse(localStorage.getItem('cart')) || [],
+
+        addItem(item) {
+          const existingItem = this.items.find(i => i.id === item.id);
+          if (existingItem) {
+            existingItem.quantity += 1;
+          } else {
+            this.items.push({ ...item, quantity: 1 });
+          }
+          this.updateCart();
+        },
+
+        updateCart() {
+          localStorage.setItem('cart', JSON.stringify(this.items));
+          // Update cart display if on order page
+          const cartContainer = document.getElementById('cartItems');
+          if (cartContainer) {
+            this.renderCart();
+          }
+          this.showNotification(`${itemName} added to cart!`);
+        },
+
+        renderCart() {
+          const cartContainer = document.getElementById('cartItems');
+          const subtotalElement = document.querySelector('.subtotal-price');
+          const totalElement = document.querySelector('.total-price');
+
+          if (cartContainer) {
+            cartContainer.innerHTML = this.items.map(item => `
+              <div class="cart-item" data-id="${item.id}">
+                <div class="cart-item-details">
+                  <h4>${item.name}</h4>
+                  <div class="cart-item-price">₹${(item.price * item.quantity).toFixed(2)}</div>
+                </div>
+                <div class="cart-item-quantity">
+                  <button class="quantity-btn minus" onclick="updateCartQuantity('${item.id}', ${item.quantity - 1})">-</button>
+                  <span>${item.quantity}</span>
+                  <button class="quantity-btn plus" onclick="updateCartQuantity('${item.id}', ${item.quantity + 1})">+</button>
+                  <button class="remove-btn" onclick="removeFromCart('${item.id}')">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            `).join('');
+
+            const totals = this.calculateTotals();
+            if (subtotalElement) subtotalElement.textContent = `₹${totals.subtotal.toFixed(2)}`;
+            if (totalElement) totalElement.textContent = `₹${totals.total.toFixed(2)}`;
+          }
+        },
+
+        calculateTotals() {
+          const subtotal = this.items.reduce((total, item) => total + (item.price * item.quantity), 0);
+          const deliveryFee = this.items.length > 0 ? 40 : 0;
+          return {
+            subtotal,
+            deliveryFee,
+            total: subtotal + deliveryFee
+          };
+        },
+
+        showNotification(message) {
+          const notification = document.createElement('div');
+          notification.className = 'cart-notification';
+          notification.textContent = message;
+          document.body.appendChild(notification);
+
+          setTimeout(() => {
+            notification.classList.add('show');
+            setTimeout(() => {
+              notification.classList.remove('show');
+              setTimeout(() => {
+                notification.remove();
+              }, 300);
+            }, 2000);
+          }, 100);
+        }
+      };
+
+      cart.addItem({ id: itemId, name: itemName, price: price });
+    }
+
+    function updateCartQuantity(itemId, newQuantity) {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const itemIndex = cart.findIndex(item => item.id === itemId);
+
+      if (itemIndex !== -1) {
+        if (newQuantity <= 0) {
+          cart.splice(itemIndex, 1);
+        } else if (newQuantity <= 10) {
+          cart[itemIndex].quantity = newQuantity;
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        const cartContainer = document.getElementById('cartItems');
+        if (cartContainer) {
+          renderCart();
+        }
+      }
+    }
+
+    function removeFromCart(itemId) {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const newCart = cart.filter(item => item.id !== itemId);
+      localStorage.setItem('cart', JSON.stringify(newCart));
+
+      const cartContainer = document.getElementById('cartItems');
+      if (cartContainer) {
+        renderCart();
+      }
+    }
+
+    // Add this to your existing CSS
+    const style = document.createElement('style');
+    style.textContent = `
+      .cart-notification {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #ff6b6b;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .cart-notification.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+
+</html>
